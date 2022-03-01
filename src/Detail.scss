@@ -1,0 +1,35 @@
+$mainColor : #000000;
+
+.black {
+  color: $mainColor;
+}
+
+@mixin func() {
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.my-alert {
+  @include func()
+}
+
+.my-alert-warn {
+  @extend .my-alert;
+  background: #ffe591;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  @extend a
+}
